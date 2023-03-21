@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicativo</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        Esse é o código JavaScript dessa página.
+        */
+
+        // Dados do usuário usando variáveis discretas.
+        var name = 'Joca da Silva'
+        var email = 'joca@silva.com'
+        var birth = '2003-03-18'
+        var cpf = '012.345.678-90'
+        var address = 'Rua do Siri Molhado, 22'
+
+        // Dados do usuário. Forma moderna! Usando notação de objetos.
+        var user = {
+
+            // Atributos do objeto "user".
+            name : 'Joca da Silva',
+            email : 'joca@silva.com',
+            birth : '2003-03-18',
+            cpf : '012.345.678-90',
+            address : 'Rua do Siri Molhado, 22',
+
+            // Métodos do objeto "user".
+            login: function() {
+                prompt('Digite seu nome e e-mail')
+            },
+            firstName: function() {
+                alert(name.split(' ')[0])
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
