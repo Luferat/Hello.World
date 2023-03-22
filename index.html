@@ -9,6 +9,8 @@
 
 <body>
 
+    <button id="login" onclick="user.login()">Entrar</button>
+
     <script>
         /*
         Esse é o código JavaScript dessa página.
@@ -25,20 +27,46 @@
         var user = {
 
             // Atributos do objeto "user".
-            name : 'Joca da Silva',
-            email : 'joca@silva.com',
-            birth : '2003-03-18',
-            cpf : '012.345.678-90',
-            address : 'Rua do Siri Molhado, 22',
+            name: 'Joca da Silva',
+            email: 'joca@silva.com',
+            birth: '2003-03-18',
+            cpf: '012.345.678-90',
+            password: '12345',
+            address: 'Rua do Siri Molhado, 22',
 
             // Métodos do objeto "user".
-            login: function() {
-                prompt('Digite seu nome e e-mail')
+            login: function () {
+
+                // Recebe o e-mail do prompt e armazena.
+                var userEmail = prompt('Digite seu e-mail:')
+
+                // Se o usuário não digitou nada...
+                if (userEmail == "" || userEmail == null) {
+                    alert("Oooops! Você não informou um e-mail...")
+                    // Encerra a função retornando false
+                    return false
+                } else if(userEmail != user.email) {
+                    alert('Oooops! E-mail não cadastrado...')
+                    return false
+                }
+
+                // Digite a senha.
+                var userPass = prompt('Digite sua senha:')
+                if (userPass == "" || userPass == null) {
+                    alert("Oooops! Você não informou a senha...")
+
+                    // Encerra a função retornando false
+                    return false
+                }
+
             },
-            firstName: function() {
+            firstName: function () {
                 alert(name.split(' ')[0])
             }
         }
+
+        // Chama a função de login.
+        // user.login()
 
     </script>
 
