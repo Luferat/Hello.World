@@ -16,13 +16,6 @@
         Esse é o código JavaScript dessa página.
         */
 
-        // Dados do usuário usando variáveis discretas.
-        var name = 'Joca da Silva'
-        var email = 'joca@silva.com'
-        var birth = '2003-03-18'
-        var cpf = '012.345.678-90'
-        var address = 'Rua do Siri Molhado, 22'
-
         // Dados do usuário. Forma moderna! Usando notação de objetos.
         var user = {
 
@@ -33,6 +26,7 @@
             cpf: '012.345.678-90',
             password: '12345',
             address: 'Rua do Siri Molhado, 22',
+            photo: 'https://randomuser.me/api/portraits/men/15.jpg',
 
             // Métodos do objeto "user".
             login: function () {
@@ -57,11 +51,23 @@
 
                     // Encerra a função retornando false
                     return false
+                } else if (userPass != user.password) {
+                    alert('Oooops! Senha incorreta...')
+                    return false
                 }
+
+                document.write('<img src="' + user.photo + '"> Olá ' + user.name + '!')
+                localStorage.userdata = JSON.stringify({
+                    name: user.name,
+                    email: user.email
+                })
+                let parts = user.birth.split('-')
+                let bdate = parts[2] + '/' + parts[1] + '/' + parts[0]
+                document.write('Nascido em ' + bdate)
 
             },
             firstName: function () {
-                alert(name.split(' ')[0])
+                alert(this.name.split(' ')[0])
             }
         }
 
