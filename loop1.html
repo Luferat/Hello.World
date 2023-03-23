@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // Um contador simples de 0 até 10.
+        for (
+            let i = 0; // Cria uma varável de contador e inicializa seu valor.
+            i <= 10; // Enquanto essa expressão for verdadeira, roda o "loop".
+            i++ // Incremento de 1 do contador.
+        ) {
+            document.write(i + '<br>')
+        }
+
+        document.write('<hr>')
+
+        // Uma tabuada de 5.
+        for (
+            let m = 0;
+            m < 11;
+            m++
+        ) {
+            document.write(`5 x ${m} = ${5 * m}<br>`)
+        }
+
+        document.write('<hr>')
+
+        // Tabuada de um valor inserido pelo usuário.
+        let val = prompt('Digite um número inteiro entre 1 e 9:')
+
+        for(
+            let x = 0;
+            x <= 10;
+            x++
+        ) {
+            document.write(`${val} x ${x} = ${val * x}<br>`)
+        }
+
+    </script>
+
+</body>
+
+</html>
